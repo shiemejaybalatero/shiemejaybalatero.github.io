@@ -417,6 +417,14 @@ h6 {
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
+.page-title .container {
+  flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+}
+
+.breadcrumbs {
+  margin-left: auto; /* Push breadcrumbs to the right */
+}
+
 .page-title {
   --background-color: color-smix(
     in srgb,
@@ -432,7 +440,7 @@ h6 {
 .page-title h1 {
   font-size: 28px;
   font-weight: 700;
-  margin: 0;
+  margin: 0px;
 }
 .page-title .breadcrumbs ol {
   display: flex;
@@ -1154,6 +1162,16 @@ h1 {
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-details .container {
+    padding: 20px;
+  }
+  .portfolio-info,
+  .portfolio-description {
+    text-align: center;
   }
 }
 
